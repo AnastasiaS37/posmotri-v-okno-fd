@@ -227,6 +227,7 @@ ol {
   border-bottom: 1px solid #ffffff;
   border-right: none;
   border-left: none;
+  padding-left: 0;
   background-color: #1b1919;
   font-family: Fira Sans Condensed;
   font-weight: 400;
@@ -310,7 +311,7 @@ ol {
 
 .button:focus-visible {
   outline: 1px solid #ffffff;
-  outline-offset: 2px;
+  outline-offset: 1.5px;
 }
 
 .content__card-link_current {
