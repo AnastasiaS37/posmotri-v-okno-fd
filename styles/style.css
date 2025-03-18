@@ -63,6 +63,10 @@ ol {
   white-space: nowrap;
 }
 
+.result {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
 .content {
   display: grid;
   grid-template-columns: 711px 399px;
@@ -75,9 +79,9 @@ ol {
 .search-form {
   display : flex;
   justify-content: space-between;
-  align-content: start;
-  min-height: 70px;
-  padding-top: 16px;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  min-height: 54px;
 }
 
 .content__list-container {
@@ -88,10 +92,10 @@ ol {
 }
 
 .content__details {
+  grid-area: 1 / 2 / 2 / 3;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* row-gap: 26px; */
   width: 100%;
   height: 100%;
 }
@@ -100,6 +104,7 @@ ol {
   width: 711px;
   height: 386px;
   position: relative;
+  margin-bottom: 16px;
 }
 
 .result__video {
@@ -122,7 +127,6 @@ ol {
 .content__video-card {
   display: flex;
   align-items: start;
-  justify-content: space-between; /* нужно? */
   cursor: pointer;
 }
 
@@ -202,7 +206,6 @@ ol {
   cursor: pointer;
 }
 
-/* Не даёт эффекта для текстового поля ввода */
 .search-form__textfield:focus {
   outline: none;
 }
@@ -216,11 +219,6 @@ ol {
   outline: 1px solid #ffffff;
   outline-offset: 0;
 }
-/* Решить, нужно ли это
-.search-form__label:has(.search-form__textfield:active) {
-  outline: 1px solid #ffffff;
-  outline-offset: 0;
-}*/
 
 .search-form__textfield {
   border-top: 1px solid #ffffff;
@@ -247,7 +245,7 @@ ol {
   align-self: center;
 }
 
-.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+.search-form__checkbox:checked ~ .search-form__pseudo-checkbox::after {
   content: "";
   display: block;
   background-color: #ffffff;
@@ -255,7 +253,7 @@ ol {
   height: 15px;
 }
 
-.search-form__checkbox:active + .search-form__pseudo-checkbox::after {
+.search-form__checkbox:active ~ .search-form__pseudo-checkbox::after {
   content: "";
   display: block;
   background-color: #ffffff;
@@ -290,7 +288,6 @@ ol {
 }
 
 .more-button {
-  width: 100%;
   height: 34px;
   inline-size: calc(100% - 5px);
   margin: 30px 0 0 2px;
@@ -318,7 +315,6 @@ ol {
   background-color: #545050;
 }
 
-/* Есть эффект? */
 .content__card-link:focus {
   outline: none;
 }
