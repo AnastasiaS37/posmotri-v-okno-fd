@@ -149,7 +149,7 @@ ol {
 }
 
 .title {
-  font-family: Oswald;
+  font-family: Oswald, 'Arial', sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
@@ -167,7 +167,7 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: Oswald;
+  font-family: Oswald, 'Arial', sans-serif;
   font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
@@ -227,7 +227,7 @@ ol {
   border-left: none;
   padding-left: 0;
   background-color: #1b1919;
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 18px;
   text-align: left;
@@ -245,14 +245,7 @@ ol {
   align-self: center;
 }
 
-.search-form__checkbox:checked ~ .search-form__pseudo-checkbox::after {
-  content: "";
-  display: block;
-  background-color: #ffffff;
-  width: 15px;
-  height: 15px;
-}
-
+.search-form__checkbox:checked ~ .search-form__pseudo-checkbox::after,
 .search-form__checkbox:active ~ .search-form__pseudo-checkbox::after {
   content: "";
   display: block;
@@ -272,7 +265,8 @@ ol {
 .button {
   border: 1px solid #ffffff;
   background-color: transparent;
-  font-family: Fira Sans Condensed;
+  height: 34px;
+  font-family: 'Fira Sans Condensed', 'Arial', sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 100%;
@@ -283,12 +277,10 @@ ol {
 
 .search-form__submit-button {
   width: 194px;
-  height: 34px;
   align-self: flex-end;
 }
 
 .more-button {
-  height: 34px;
   inline-size: calc(100% - 5px);
   margin: 30px 0 0 2px;
 }
